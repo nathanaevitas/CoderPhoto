@@ -45,6 +45,12 @@ group :development, :test do
   gem 'spring'
 end
 
+# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem 'tzinfo-data', platforms: [:mingw, :mswin]
+
+# Use CoffeeScript version 1.8.0 to fix error 'ExecJS::ProgramError in views'
+gem 'coffee-script-source', '1.8.0'
+
 gem 'rails_12factor', group: :production
 gem 'devise'
 gem 'sucker_punch', '~> 1.0'
