@@ -15,4 +15,13 @@
   <% else %>
     Please log in to to Like.
   <% end %>
+  <div class="comments">
+    <%= render "comments/comments", comments: photo.comments %>
+  </div>
+  <div class='card-footer'>
+    <%= form_for [photo, Comment.new], remote: true do |f| %>
+    <%=f.text_field :content, class: 'form-control' %>
+    <%=f.submit 'Submit Coment' %>
+    <% end %>
+  </div>
 </div>

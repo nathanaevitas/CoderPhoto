@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
+  get 'comments/index'
+
+  get 'comments/new'
+
+  get 'comments/create'
+
   devise_for :users
-  resources :photos do 
+  resources :photos do
+    resources :comments 
     collection do
       get 'index'
     end

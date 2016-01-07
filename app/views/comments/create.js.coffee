@@ -1,0 +1,1 @@
+$("#<%= dom_id @photo %> div.comments").html("<%= j render "comments/comments", comments: @photo.comments %>")

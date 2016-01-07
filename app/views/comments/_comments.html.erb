@@ -1,0 +1,7 @@
+<div class="card-block">
+  <h4><%= pluralize(comments.count,'comment') %></h4>
+    <% comments.each do |comment| %>
+      <p><%= comment.user.email if comment.user %></p>
+	  <p><%= comment.content %></p>      
+    <% end %>    
+</div>
